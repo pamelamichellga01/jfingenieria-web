@@ -1,0 +1,137 @@
+/* Estilos generales del formulario de contacto */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.contenedor_contacto {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 5%;
+    gap: 1em;
+}
+
+.infor_contacto, .form_contacto {
+    width: 45%;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.infor_contacto h2, .form_contacto h2 {
+    font-size: 2em;
+    color: #0E5A97;
+    margin-bottom: 1em;
+}
+
+.form_contacto label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+.form_contacto input, 
+.form_contacto textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+.form_contacto button {
+    width: 100%;
+    background-color: #0E5A97;
+    color: white;
+    padding: 02em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form_contacto button:hover {
+    background-color: #003366;
+}
+
+/* Estilo para la imagen de contacto dentro de infor_contacto */
+.imagen-contacto {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 100%; /* Mantendrá la proporción de la imagen */
+    border-radius: 0px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Media Query para Tablets (Pantallas medianas) */
+@media screen and (max-width: 768px) {
+    .contenedor_contacto {
+        flex-direction: column; /* Cambia a columna en tablets */
+        padding: 2em 5%; /* Reduce el padding horizontal */
+    }
+
+    .infor_contacto, .form_contacto {
+        width: 100%; /* Ocupa todo el ancho en tablets */
+        margin-bottom: 2em; /* Espacio adicional entre las secciones */
+    }
+    
+    .infor_contacto h2, .form_contacto h2 {
+        font-size: 1.8em; /* Ajusta el tamaño del título en tablets */
+    }
+}
+
+/* Media Query para Móviles (Pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño general del texto */
+    }
+
+    .contenedor_contacto {
+        padding: 1em 2%; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .infor_contacto, .form_contacto {
+        padding: 1.5em; /* Reduce el padding interno en móviles */
+    }
+
+    .infor_contacto h2, .form_contacto h2 {
+        font-size: 1.5em; /* Reduce el tamaño del título en móviles */
+    }
+
+    .form_contacto input, 
+    .form_contacto textarea {
+        padding: 0.8em; /* Ajusta el padding interno en móviles */
+    }
+
+    .form_contacto button {
+        padding: 0.8em; /* Ajusta el padding del botón */
+        font-size: 1em; /* Reduce el tamaño de la fuente del botón */
+    }
+}
+
+/* Media Query para Tablets (Pantallas medianas) */
+@media screen and (max-width: 768px) {
+    .infor_contacto {
+        width: 100%; /* Ocupa todo el ancho en tablets */
+        margin-bottom: 2em;
+    }
+
+    .imagen-contacto {
+        max-width: 80%; /* Limita el ancho de la imagen en tablets */
+        margin: 0 auto; /* Centra la imagen en tablets */
+    }
+}
+
+/* Media Query para Móviles (Pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+    .infor_contacto {
+        padding: 1.5em; /* Reduce el padding en móviles */
+    }
+
+    .imagen-contacto {
+        max-width: 100%; /* Ocupa todo el ancho en móviles */
+    }
+}
