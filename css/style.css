@@ -1,0 +1,393 @@
+/* Reset general - Elimina márgenes y padding predeterminados en los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración del cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Estilos del encabezado y menú de navegación */
+/* Estilos del header */
+header {
+  background: linear-gradient(135deg, #0E5A97, #999B9D);
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+ul.menu {
+  list-style: none;
+  display: flex;
+}
+
+ul.menu li {
+  position: relative;
+}
+
+ul.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+ul.menu li:hover {
+  background: linear-gradient(180deg, #2C5A7D, #507BA1);
+}
+
+ul.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: linear-gradient(180deg, #607D99, #B2B4B6);
+  display: none;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+ul.submenu li a {
+  padding: 10px 15px;
+}
+
+/* Estilos para el contenido principal */
+.contenido, .perfiles {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Inserta aquí la nueva estructura CSS */
+
+/* Contenedor para organizar el carrusel y la sección Sobre Nosotros */
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between; /* Espacio entre el carrusel y "Sobre Nosotros" */
+  align-items: flex-start; /* Alinea ambos elementos al mismo nivel superior */
+  margin: 20px;
+  height: 100%;
+}
+
+/* Estilos del nuevo carrusel */
+.carrusel-simplificado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 700px; /* Ajusta el tamaño según sea necesario */
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrusel-item {
+  min-width: 100%;
+  display: none; /* Ocultar todas las imágenes por defecto */
+}
+
+.carrusel-item.activo {
+  display: block; /* Solo mostrar la imagen activa */
+}
+
+.carrusel-boton {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#anterior {
+  left: 10px;
+}
+
+#siguiente {
+  right: 10px;
+}
+
+
+/* Estilos específicos para la columna derecha (Sobre Nosotros) */
+.right-column {
+  flex: 1;
+  max-width: 400px; /* Ajusta según el espacio disponible */
+}
+
+.img_visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s linear;
+}
+
+.img_oculto {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s linear;
+}
+
+/* Fin de la nueva estructura CSS */
+
+/* Estilos de la tarjeta para la sección "Sobre Nosotros" */
+.sobre-nosotros-card {
+  background-color: #ffffff;
+  border-radius: 0%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  margin: auto;
+  max-width: 500px; /* Ajusta el ancho máximo si lo deseas */
+  text-align: center;
+}
+
+.sobre-nosotros-card h2 {
+  color: #003366; /* Color del ícono en su estado normal */
+}
+
+.sobre-nosotros-card p{
+  margin: 5px ;
+}
+
+
+/* Sección de Visión y Misión */
+.vision-mision {
+  padding: 3em 5%;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+/* Título de la sección */
+.vision-mision h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+/* Contenedor para las tarjetas de Visión y Misión */
+.cards-container {
+  display: flex;
+  justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+  gap: 2em;
+  padding: 2em;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background-color: #ffffff;
+  border-radius: 0%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  width: 70%; /* Abarcar más ancho de la pantalla */
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  position: relative; /* Necesario para el efecto de onda */
+}
+
+
+
+/* Efecto de hover en las tarjetas */
+.card:hover {
+  background-color: #2C3E50; /* Cambia a un tono oscuro al pasar el cursor */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de iconos en las tarjetas */
+.card .icon {
+  margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+}
+
+/* Icono con efecto de ondas */
+.card .icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #ececec;
+  box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+  animation: water-drop 1.5s infinite; /* Agregamos la animación */
+}
+
+/* Efecto de expansión en la onda al hacer hover */
+.card:hover .icon img {
+  box-shadow: 0 0 20px 10px rgba(204, 169, 44, 0.4);
+  transform: scale(1.1); /* Amplía ligeramente el icono */
+}
+
+/* Animación tipo gota de agua */
+@keyframes water-drop {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px 15px rgba(204, 169, 44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+/* Títulos dentro de las tarjetas */
+.card h3 {
+  font-size: 1.5em;
+  color: #003366;
+  margin-bottom: 0.5em;
+  font-weight: bold; /* Negrita por defecto */
+  transition: color 0.3s ease;
+}
+
+/* Texto dentro de las tarjetas */
+.card p {
+  font-size: 1em;
+  color: #333; /* Gris oscuro por defecto */
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Cambiar el color del texto al hacer hover */
+.card:hover h3,
+.card:hover p {
+  color: #ffffff; /* Cambiar texto a blanco en hover */
+}
+
+.card .icon {
+  margin-bottom: 1em;
+  font-size: 3em; /* Tamaño del ícono */
+  color: #003366; /* Color del ícono en su estado normal */
+  transition: color 0.3s ease; /* Suaviza el cambio de color en hover */
+}
+
+.card:hover .icon {
+  color: #fff; /* Color del ícono cuando el cursor está sobre la tarjeta */
+}
+
+/* Estilos del pie de página */
+footer {
+  background: linear-gradient(135deg, #003366, #808080);
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 15px;
+}
+
+footer .social-links a {
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+/* Estilos específicos del carrusel */
+.carrusel {
+  position: relative;
+}
+
+.carrusel img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80%;
+  transition: all 1s linear;
+}
+
+/* Configuración para imágenes visibles y ocultas en el carrusel */
+.img_visible {
+  opacity: 1;
+  transition: all 1s linear;
+}
+
+.img_oculto {
+  opacity: 0;
+  transition: all 1s linear;
+}
+
+/* Estilos para los botones de navegación del carrusel */
+#siguiente, #anterior {
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+}
+
+#siguiente img, #anterior img {
+  position: relative;
+  display: block;
+  max-width: 100px;
+  height: 100px;
+  top: 35%;
+}
+
+/* Configuración responsive para dispositivos móviles */
+@media screen and (max-width: 1040px) {
+  #siguiente {
+      height: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #siguiente, #anterior {
+      height: 200px;
+  }
+  #siguiente img, #anterior img {
+      max-width: 25px;
+      height: 25px;
+      top: 40%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #siguiente, #anterior {
+      height: 125px;
+  }
+  #siguiente img, #anterior img {
+      max-width: 25px;
+      height: 25px;
+      top: 40%;
+  }
+}

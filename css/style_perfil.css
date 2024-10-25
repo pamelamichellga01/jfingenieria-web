@@ -1,0 +1,343 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Estilos del header */
+header {
+    background: linear-gradient(135deg, #0E5A97, #999B9D);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+}
+
+ul.menu li {
+    position: relative;
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+ul.menu li:hover {
+    background: linear-gradient(180deg, #2C5A7D, #507BA1);
+}
+
+ul.submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(180deg, #607D99, #B2B4B6);
+    display: none;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+ul.menu li:hover .submenu {
+    display: block;
+}
+
+ul.submenu li a {
+    padding: 10px 15px;
+}
+
+/* Sección principal */
+#sec_principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 5%;
+    background-color: #ffffff;
+}
+
+.info_personal {
+    flex: 1;
+    text-align: center;
+}
+
+.info_personal h4 {
+    margin-bottom: 40px; /* Ajusta el valor según el espacio que desees */
+}
+
+.foto_perfil {
+    border-radius: 50%;
+    width: 250px;
+    height: 260px;
+    margin-bottom: 1em;
+    border: 4px solid #003366;
+}
+
+.perfil_profesional {
+    flex: 1;
+    text-align: left;
+    margin-left: 3em;
+
+    display: flex; /* Activa Flexbox en el contenedor */
+    flex-direction: column; /* Mantén la dirección en columna */
+    justify-content: center; /* Centra verticalmente */
+    text-align: left; /* Si quieres que el texto siga alineado a la izquierda */
+    height: 100%; /* Asegúrate de que el contenedor tenga altura suficiente */
+}
+
+.perfil_profesional h2 {
+    font-size: 2em;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 83px;
+}
+
+.perfil_profesional p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+/* Fondo de la sección combinada de Habilidades y Responsabilidades */
+.habilidades_responsabilidades {
+    padding: 4em 5%;
+    background-color: #999B9D; /* Fondo gris oscuro original */
+    text-align: center;
+}
+
+.habilidades_responsabilidades h2 {
+    font-size: 2.2em;
+    color: #ffffff; /* Títulos en blanco */
+    margin-bottom: 2em;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 3em; /* Espaciado entre grupos de tarjetas */
+}
+
+/* Estilos de las tarjetas */
+.card_1 {
+    background-color: #4992BF; /* Fondo azul original */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card_2 {
+    background-color: #0E5A97; /* Fondo azul original */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card_2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Íconos dentro de las tarjetas */
+.card_1 .icon {
+    margin-bottom: 1em;
+    text-align: left; /* Alinea la imagen a la derecha */
+}
+
+.card_2 .icon {
+    margin-bottom: 1em;
+    text-align: left; /* Alinea la imagen a la derecha */
+    
+}
+
+.card_1 h3 {
+    font-size: 1.2em;
+    color: #ffffff; /* Títulos en blanco */
+    margin-bottom: 0.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card_2 h3 {
+    font-size: 1.2em;
+    color: #ffffff; /* Títulos en blanco */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card_1 p {
+    font-size: 0.9em;
+    color: #ffffff; /* Texto en blanco */
+    line-height: 1.6;
+}
+
+.card_2 p {
+    font-size: 0.9em;
+    color: #ffffff; /* Texto en blanco */
+    line-height: 1.6;
+}
+
+.icon i {
+    font-size: 50px; /* Tamaño del ícono */
+    color: #ffffff; /* Color blanco para el ícono */
+    margin-bottom: 10px;
+}
+
+.card_1 .icon img{
+    width: 50px;
+}
+
+.card_2 .icon img{
+    width: 50px;
+}
+
+/* Estilos para la sección de Perfil Personal */
+#info_personal {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    align-items: center; /* Alinea verticalmente en el centro */
+    gap: 2em;
+    padding: 3em 5%;
+    background-color: #f9f9fb;
+    margin-top: 3em;
+    border-radius: 10px;
+}
+
+.perfil_personal {
+    flex: 1;
+    text-align: right;
+    margin-right: 3em;
+}
+
+.perfil_personal h2 {
+    font-size: 2em;
+    color: #003366;
+    text-align: center;
+}
+
+.perfil_personal p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 50px;
+}
+
+.connect{
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 50px;
+}
+
+/* Contenedor para el efecto de imagen */
+.foto-wrapper {
+    position: relative; /* Activa posición relativa para manejar el pseudo-elemento */
+    display: inline-block; /* Asegura que se ajuste al contenido */
+    margin-bottom: 20px; /* Espacio inferior para separar del texto */
+}
+
+/* Pseudo-elemento para crear el fondo detrás de la imagen */
+.foto-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 30px; /* Ajusta la distancia desde la izquierda */
+    width: 100%;
+    height: 100%;
+    background-color: #0C5C94; /* Color de fondo verde */
+    /*z-index: -1; /* Envía el pseudo-elemento detrás de la imagen */
+    border-radius: 0px; /* Bordes redondeados si lo deseas */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transform: translate(-10px, 10px); /* Ajusta para crear el efecto de sombra o desalineación */
+}
+
+/* Imagen de perfil */
+.foto_perfil_derecha {
+    position: relative;
+    width: 400px;
+    height: 450px; /* Aumenta la altura si es necesario para ajustarse al diseño */
+    overflow: hidden;
+    border-radius: 0px; /* Bordes redondeados */
+    /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de la imagen dentro del contenedor */
+.foto_perfil_derecha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.foto_perfil_derecha:hover img {
+    transform: scale(1.05); /* Zoom suave al pasar el mouse */
+}
+/* Estilos del pie de página */
+footer {
+    background: linear-gradient(135deg, #003366, #808080);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 15px;
+}
+
+footer .social-links a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 1em;
+    font-size: 0.9em;
+}

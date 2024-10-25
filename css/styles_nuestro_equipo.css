@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #0E5A97, #999B9D);
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+ul.menu {
+  list-style: none;
+  display: flex;
+}
+
+ul.menu li {
+  position: relative;
+}
+
+ul.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+ul.menu li:hover {
+  background: linear-gradient(180deg, #2C5A7D, #507BA1);
+}
+
+ul.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: linear-gradient(180deg, #607D99, #B2B4B6);
+  display: none;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+ul.submenu li a {
+  padding: 10px 15px;
+}
+
+/* Estilos del contenedor del equipo, que ocupa todo el ancho */
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;  /* Abarca todo el ancho */
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%; /* Ocupa el 18% de todo el ancho */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+  width: 150px; /* Tamaño más grande */
+  height: 150px;
+  margin-bottom: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.1); /* Aumenta el tamaño en hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+}
+
+.team-member button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.team-member button:hover {
+  background-color: #0055aa;
+}
+
+/* Estilos del pie de página */
+footer {
+  background: linear-gradient(135deg, #003366, #808080);
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 15px;
+}
+
+footer .social-links a {
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
