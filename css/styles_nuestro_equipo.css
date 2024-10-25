@@ -177,6 +177,11 @@ footer p {
     align-items: center;
   }
 
+  ul.menu {
+    flex-direction: column;
+    align-items: center;
+}
+
   .team-member img {
     width: 100px;
     height: 100px;
