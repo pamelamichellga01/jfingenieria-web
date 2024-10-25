@@ -148,6 +148,45 @@ footer p {
 
 /* Ajustes para tablets (pantallas medianas) */
 @media screen and (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column; /* Cambia a diseño en columna para dispositivos medianos */
+  }
+  
+  .carrusel-simplificado {
+    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho en tablets */
+  }
+
+  .right-column {
+    max-width: 100%; /* Asegura que la sección de "Sobre Nosotros" ocupe todo el ancho */
+  }
+}
+
+/* Ajustes para móviles (pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Reduce el tamaño del texto */
+  }
+
+  header nav {
+    flex-direction: column; /* Cambia el menú a una columna en móviles */
+  }
+
+  .carrusel-boton {
+    padding: 8px; /* Botones más pequeños en móviles */
+  }
+
+  .cards-container {
+    flex-direction: column; /* Cambia a diseño en columna para tarjetas en móviles */
+  }
+
+  .card {
+    width: 90%; /* Ajusta el ancho de las tarjetas para ocupar casi todo el espacio */
+    margin: 10px auto; /* Centra las tarjetas con margen automático */
+  }
+}
+
+/* Ajustes para tablets (pantallas medianas) */
+@media screen and (max-width: 768px) {
   .team-container {
     flex-direction: column; /* Apila miembros del equipo verticalmente */
     gap: 20px; /* Espacio adicional entre miembros del equipo */
