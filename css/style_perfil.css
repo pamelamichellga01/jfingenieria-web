@@ -7,11 +7,15 @@
 
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
 /* Estilo del body */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
@@ -217,14 +221,14 @@ ul.submenu li a {
 
 .perfil_personal {
     flex: 1;
-    text-align: right;
-    margin-right: 3em;
+    text-align: left;
+    margin-right: 2em;
 }
 
 .perfil_personal h2 {
     font-size: 2em;
     color: #003366;
-    text-align: center;
+    margin-bottom: 1em;
 }
 
 .perfil_personal p, .connect {
@@ -232,7 +236,7 @@ ul.submenu li a {
     color: #333;
     line-height: 1.6;
     text-align: justify;
-    margin: 50px;
+    margin-bottom: 1.5em;
 }
 
 /* Contenedor para el efecto de imagen */
@@ -257,11 +261,11 @@ ul.submenu li a {
 
 /* Imagen de perfil */
 .foto_perfil_derecha {
-    position: relative;
-    width: 400px;
-    height: 450px;
+    width: 300px; /* Tamaño de la imagen */
+    height: 350px;
     overflow: hidden;
-    border-radius: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .foto_perfil_derecha img {
@@ -274,6 +278,25 @@ ul.submenu li a {
 .foto_perfil_derecha:hover img {
     transform: scale(1.05);
 }
+
+.connect {
+    margin-top: 1.5em;
+  }
+  
+  .connect h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #003366;
+  }
+  
+  .connect a img {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .connect a:hover img {
+    transform: scale(1.2); /* Efecto zoom en los íconos sociales */
+  }
 
 /* Estilos del pie de página */
 footer {
@@ -340,3 +363,59 @@ footer p {
         margin: 10px auto;
     }
 }
+
+/* Ajustes para tablets (pantallas medianas) */
+@media screen and (max-width: 768px) {
+    #info_personal {
+      flex-direction: column; /* Cambia la disposición a columna */
+      align-items: center; /* Centra los elementos */
+      padding: 2em 5%;
+    }
+  
+    .foto_perfil_derecha {
+      width: 250px;
+      height: 300px;
+    }
+  
+    .perfil_personal {
+      text-align: center; /* Centra el texto en tablets */
+      margin-left: 0; /* Elimina el margen izquierdo */
+    }
+  
+    .perfil_personal h2 {
+      font-size: 1.8em;
+    }
+  
+    .perfil_personal p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Ajustes para móviles (pantallas pequeñas) */
+  @media screen and (max-width: 480px) {
+    #info_personal {
+      padding: 1.5em;
+    }
+  
+    .foto_perfil_derecha {
+      width: 200px;
+      height: 250px;
+    }
+  
+    .perfil_personal h2 {
+      font-size: 1.6em;
+    }
+  
+    .perfil_personal p {
+      font-size: 0.9em;
+    }
+  
+    .connect h3 {
+      font-size: 1.3em;
+    }
+  
+    .connect a img {
+      height: 25px; /* Ajusta el tamaño de los íconos sociales */
+      width: 30px;
+    }
+  }
