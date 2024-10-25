@@ -187,6 +187,7 @@ h2 {
   padding: 2em;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en dispositivos más pequeños */
 }
 
 /* Estilos de las tarjetas */
@@ -195,7 +196,9 @@ h2 {
   border-radius: 0%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   padding: 2em;
-  width: 70%;
+  width: 45%; /* Ajusta a 45% para permitir dos tarjetas por fila en tablets */
+  min-width: 250px; /* Mínimo ancho para dispositivos más pequeños */
+  margin-bottom: 2em;
   text-align: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   position: relative;
@@ -214,18 +217,19 @@ h2 {
   display: inline-block;
 }
 
-.card .icon img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  padding: 10px;
+.card .icon i {
+  font-size: 3em; /* Ajuste del tamaño del icono */
   background-color: #ececec;
+  padding: 15px; /* Aumenta el espacio para mejorar la visibilidad */
+  border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   transition: box-shadow 0.6s ease, transform 0.6s ease;
   animation: water-drop 1.5s infinite;
+  z-index: 1;
+  color: #003366;
 }
 
-.card:hover .icon img {
+.card:hover .icon i {
   box-shadow: 0 0 20px 10px rgba(204, 169, 44, 0.4);
   transform: scale(1.1);
 }
@@ -266,16 +270,40 @@ h2 {
   color: #ffffff;
 }
 
-.card .icon {
-  margin-bottom: 1em;
-  font-size: 3em;
-  color: #003366;
-  transition: color 0.3s ease;
+/* Media Queries para dispositivos tablets */
+@media screen and (max-width: 768px) {
+  .cards-container {
+    flex-direction: column; /* Apila las tarjetas en dispositivos más pequeños */
+    gap: 1.5em;
+  }
+
+  .card {
+    width: 80%; /* Ocupa un ancho mayor en tablets */
+    margin: 0 auto;
+  }
+
+  .vision-mision h2 {
+    font-size: 1.8em; /* Reduce el tamaño del título */
+  }
 }
 
-.card:hover .icon {
-  color: #fff;
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 480px) {
+  .vision-mision h2 {
+    font-size: 1.6em;
+  }
+
+  .card {
+    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    margin-bottom: 1.5em;
+  }
+
+  .card .icon i {
+    font-size: 2.5em; /* Ajusta el tamaño del icono para móviles */
+    padding: 10px; /* Reduce el padding para móviles */
+  }
 }
+
 
 /* Estilos del pie de página */
 footer {
@@ -431,4 +459,20 @@ footer p {
     ul.menu li:hover .submenu {
         display: none !important; /* No mostrar submenu al pasar el mouse */
     }
+}
+
+/* Ajuste para tablets (pantallas medianas) */
+@media screen and (max-width: 768px) {
+  .card .icon img {
+      width: 50px;
+      height: 50px;
+  }
+}
+
+/* Ajuste para móviles (pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+  .card .icon img {
+      width: 40px;
+      height: 40px;
+  }
 }
