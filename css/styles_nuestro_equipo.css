@@ -1,3 +1,4 @@
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+/* Estilo del body */
 body {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,7 @@ body {
   color: #333;
 }
 
+/* Estilos del encabezado */
 header {
   background: linear-gradient(135deg, #0E5A97, #999B9D);
   color: white;
@@ -30,6 +33,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
 }
 
 .logo img {
@@ -39,6 +43,8 @@ header nav {
 ul.menu {
   list-style: none;
   display: flex;
+  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
+  justify-content: center;
 }
 
 ul.menu li {
@@ -75,35 +81,36 @@ ul.submenu li a {
   padding: 10px 15px;
 }
 
-/* Estilos del contenedor del equipo, que ocupa todo el ancho */
+/* Estilos del contenedor del equipo */
 .team-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;  /* Abarca todo el ancho */
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   flex-grow: 1;
 }
 
+/* Estilos para cada miembro del equipo */
 .team-member {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 18%; /* Ocupa el 18% de todo el ancho */
+  width: 18%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member img {
-  width: 150px; /* Tamaño más grande */
+  width: 150px;
   height: 150px;
   margin-bottom: 1em;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member:hover {
-  transform: scale(1.1); /* Aumenta el tamaño en hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .team-member button {
@@ -148,65 +155,35 @@ footer p {
 
 /* Ajustes para tablets (pantallas medianas) */
 @media screen and (max-width: 768px) {
-  .contenedor-principal {
-    flex-direction: column; /* Cambia a diseño en columna para dispositivos medianos */
-  }
-  
-  .carrusel-simplificado {
-    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho en tablets */
+  .team-container {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .right-column {
-    max-width: 100%; /* Asegura que la sección de "Sobre Nosotros" ocupe todo el ancho */
+  .team-member {
+    width: 80%;
+    margin: 10px auto;
   }
 }
 
 /* Ajustes para móviles (pantallas pequeñas) */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px; /* Reduce el tamaño del texto */
+    font-size: 14px;
   }
 
   header nav {
-    flex-direction: column; /* Cambia el menú a una columna en móviles */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .carrusel-boton {
-    padding: 8px; /* Botones más pequeños en móviles */
-  }
-
-  .cards-container {
-    flex-direction: column; /* Cambia a diseño en columna para tarjetas en móviles */
-  }
-
-  .card {
-    width: 90%; /* Ajusta el ancho de las tarjetas para ocupar casi todo el espacio */
-    margin: 10px auto; /* Centra las tarjetas con margen automático */
-  }
-}
-
-/* Ajustes para tablets (pantallas medianas) */
-@media screen and (max-width: 768px) {
-  .team-container {
-    flex-direction: column; /* Apila miembros del equipo verticalmente */
-    gap: 20px; /* Espacio adicional entre miembros del equipo */
-  }
-
-  .team-member {
-    width: 80%; /* Asegura que cada miembro ocupe más espacio en tablets */
-    margin: 10px auto; /* Centra cada tarjeta */
-  }
-}
-
-/* Ajustes para móviles (pantallas pequeñas) */
-@media screen and (max-width: 480px) {
   .team-member img {
-    width: 100px; /* Tamaño más pequeño para imágenes en móviles */
+    width: 100px;
     height: 100px;
   }
 
   .team-member button {
-    font-size: 0.9em; /* Ajusta el tamaño del texto del botón en móviles */
-    padding: 10px 15px; /* Reduce el padding para móviles */
+    font-size: 0.9em;
+    padding: 10px 15px;
   }
 }

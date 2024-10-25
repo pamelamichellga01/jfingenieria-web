@@ -30,6 +30,7 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 .logo img {
@@ -39,6 +40,8 @@ header nav {
 ul.menu {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en móviles */
+    justify-content: center; /* Centra el menú en pantallas más pequeñas */
 }
 
 ul.menu li {
@@ -90,7 +93,7 @@ ul.submenu li a {
 }
 
 .info_personal h4 {
-    margin-bottom: 40px; /* Ajusta el valor según el espacio que desees */
+    margin-bottom: 40px;
 }
 
 .foto_perfil {
@@ -105,12 +108,10 @@ ul.submenu li a {
     flex: 1;
     text-align: left;
     margin-left: 3em;
-
-    display: flex; /* Activa Flexbox en el contenedor */
-    flex-direction: column; /* Mantén la dirección en columna */
-    justify-content: center; /* Centra verticalmente */
-    text-align: left; /* Si quieres que el texto siga alineado a la izquierda */
-    height: 100%; /* Asegúrate de que el contenedor tenga altura suficiente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .perfil_profesional h2 {
@@ -131,13 +132,13 @@ ul.submenu li a {
 /* Fondo de la sección combinada de Habilidades y Responsabilidades */
 .habilidades_responsabilidades {
     padding: 4em 5%;
-    background-color: #999B9D; /* Fondo gris oscuro original */
+    background-color: #999B9D;
     text-align: center;
 }
 
 .habilidades_responsabilidades h2 {
     font-size: 2.2em;
-    color: #ffffff; /* Títulos en blanco */
+    color: #ffffff;
     margin-bottom: 2em;
 }
 
@@ -147,97 +148,66 @@ ul.submenu li a {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2em;
-    margin-bottom: 3em; /* Espaciado entre grupos de tarjetas */
+    margin-bottom: 3em;
 }
 
 /* Estilos de las tarjetas */
+.card_1, .card_2 {
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .card_1 {
-    background-color: #4992BF; /* Fondo azul original */
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #4992BF;
 }
+
 .card_2 {
-    background-color: #0E5A97; /* Fondo azul original */
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #0E5A97;
 }
 
-.card_1:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
-}
-
-.card_2:hover {
+.card_1:hover, .card_2:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Íconos dentro de las tarjetas */
-.card_1 .icon {
+.card_1 .icon, .card_2 .icon {
     margin-bottom: 1em;
-    text-align: left; /* Alinea la imagen a la derecha */
+    text-align: left;
 }
 
-.card_2 .icon {
-    margin-bottom: 1em;
-    text-align: left; /* Alinea la imagen a la derecha */
-    
-}
-
-.card_1 h3 {
+.card_1 h3, .card_2 h3 {
     font-size: 1.2em;
-    color: #ffffff; /* Títulos en blanco */
-    margin-bottom: 0.5em;
+    color: #ffffff;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.card_2 h3 {
-    font-size: 1.2em;
-    color: #ffffff; /* Títulos en blanco */
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.card_1 p {
+.card_1 p, .card_2 p {
     font-size: 0.9em;
-    color: #ffffff; /* Texto en blanco */
-    line-height: 1.6;
-}
-
-.card_2 p {
-    font-size: 0.9em;
-    color: #ffffff; /* Texto en blanco */
+    color: #ffffff;
     line-height: 1.6;
 }
 
 .icon i {
-    font-size: 50px; /* Tamaño del ícono */
-    color: #ffffff; /* Color blanco para el ícono */
+    font-size: 50px;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
-.card_1 .icon img{
-    width: 50px;
-}
-
-.card_2 .icon img{
+.card_1 .icon img, .card_2 .icon img {
     width: 50px;
 }
 
 /* Estilos para la sección de Perfil Personal */
 #info_personal {
     display: flex;
-    justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
-    align-items: center; /* Alinea verticalmente en el centro */
+    justify-content: flex-start;
+    align-items: center;
     gap: 2em;
     padding: 3em 5%;
     background-color: #f9f9fb;
@@ -257,15 +227,7 @@ ul.submenu li a {
     text-align: center;
 }
 
-.perfil_personal p {
-    font-size: 1.1em;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-    margin: 50px;
-}
-
-.connect{
+.perfil_personal p, .connect {
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
@@ -275,37 +237,33 @@ ul.submenu li a {
 
 /* Contenedor para el efecto de imagen */
 .foto-wrapper {
-    position: relative; /* Activa posición relativa para manejar el pseudo-elemento */
-    display: inline-block; /* Asegura que se ajuste al contenido */
-    margin-bottom: 20px; /* Espacio inferior para separar del texto */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
-/* Pseudo-elemento para crear el fondo detrás de la imagen */
 .foto-wrapper::before {
     content: "";
     position: absolute;
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    left: 30px; /* Ajusta la distancia desde la izquierda */
+    top: 20px;
+    left: 30px;
     width: 100%;
     height: 100%;
-    background-color: #0C5C94; /* Color de fondo verde */
-    /*z-index: -1; /* Envía el pseudo-elemento detrás de la imagen */
-    border-radius: 0px; /* Bordes redondeados si lo deseas */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transform: translate(-10px, 10px); /* Ajusta para crear el efecto de sombra o desalineación */
+    background-color: #0C5C94;
+    border-radius: 0px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translate(-10px, 10px);
 }
 
 /* Imagen de perfil */
 .foto_perfil_derecha {
     position: relative;
     width: 400px;
-    height: 450px; /* Aumenta la altura si es necesario para ajustarse al diseño */
+    height: 450px;
     overflow: hidden;
-    border-radius: 0px; /* Bordes redondeados */
-    /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 0px;
 }
 
-/* Estilo de la imagen dentro del contenedor */
 .foto_perfil_derecha img {
     width: 100%;
     height: 100%;
@@ -314,8 +272,9 @@ ul.submenu li a {
 }
 
 .foto_perfil_derecha:hover img {
-    transform: scale(1.05); /* Zoom suave al pasar el mouse */
+    transform: scale(1.05);
 }
+
 /* Estilos del pie de página */
 footer {
     background: linear-gradient(135deg, #003366, #808080);
@@ -344,70 +303,41 @@ footer p {
 
 /* Ajustes para tablets (pantallas medianas) */
 @media screen and (max-width: 768px) {
-    .contenedor-principal {
-      flex-direction: column; /* Cambia a diseño en columna para dispositivos medianos */
+    #sec_principal, .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .carrusel-simplificado {
-      max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho en tablets */
+    .perfil_profesional, .right-column {
+        margin-left: 0;
+        text-align: center;
+        max-width: 100%;
     }
-  
-    .right-column {
-      max-width: 100%; /* Asegura que la sección de "Sobre Nosotros" ocupe todo el ancho */
-    }
-  }
-  
-  /* Ajustes para móviles (pantallas pequeñas) */
-  @media screen and (max-width: 480px) {
+}
+
+/* Ajustes para móviles (pantallas pequeñas) */
+@media screen and (max-width: 480px) {
     body {
-      font-size: 14px; /* Reduce el tamaño del texto */
+        font-size: 14px;
     }
   
     header nav {
-      flex-direction: column; /* Cambia el menú a una columna en móviles */
+        flex-direction: column;
+        align-items: center;
     }
   
-    .carrusel-boton {
-      padding: 8px; /* Botones más pequeños en móviles */
+    ul.menu {
+        flex-direction: column;
+        align-items: center;
     }
   
-    .cards-container {
-      flex-direction: column; /* Cambia a diseño en columna para tarjetas en móviles */
+    .card-container, .cards-container {
+        flex-direction: column;
+        gap: 1em;
     }
   
     .card {
-      width: 90%; /* Ajusta el ancho de las tarjetas para ocupar casi todo el espacio */
-      margin: 10px auto; /* Centra las tarjetas con margen automático */
+        width: 90%;
+        margin: 10px auto;
     }
-  }
-  
-
-/* Ajustes para tablets (pantallas medianas) */
-@media screen and (max-width: 768px) {
-    #sec_principal {
-      flex-direction: column; /* Apila secciones verticalmente */
-      align-items: center; /* Centra los elementos */
-    }
-  
-    .perfil_profesional {
-      margin-left: 0; /* Elimina el margen izquierdo en tablets */
-      text-align: center; /* Centra el texto */
-    }
-  }
-  
-  /* Ajustes para móviles (pantallas pequeñas) */
-  @media screen and (max-width: 480px) {
-    .perfil_profesional h2 {
-      font-size: 1.8em; /* Reduce el tamaño de los títulos */
-    }
-  
-    .perfil_profesional p {
-      font-size: 1em; /* Reduce el tamaño del texto */
-    }
-  
-    .card-container {
-      flex-direction: column; /* Apila las tarjetas verticalmente en móviles */
-      gap: 1em; /* Reduce la separación entre tarjetas */
-    }
-  }
-  
+}

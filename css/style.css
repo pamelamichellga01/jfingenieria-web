@@ -14,7 +14,6 @@ body {
 }
 
 /* Estilos del encabezado y menú de navegación */
-/* Estilos del header */
 header {
   background: linear-gradient(135deg, #0E5A97, #999B9D);
   color: white;
@@ -27,6 +26,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
 }
 
 .logo img {
@@ -36,6 +36,8 @@ header nav {
 ul.menu {
   list-style: none;
   display: flex;
+  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
+  justify-content: center;
 }
 
 ul.menu li {
@@ -84,13 +86,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Inserta aquí la nueva estructura CSS */
-
 /* Contenedor para organizar el carrusel y la sección Sobre Nosotros */
 .contenedor-principal {
   display: flex;
-  justify-content: space-between; /* Espacio entre el carrusel y "Sobre Nosotros" */
-  align-items: flex-start; /* Alinea ambos elementos al mismo nivel superior */
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 20px;
   height: 100%;
 }
@@ -101,7 +101,7 @@ h2 {
   justify-content: center;
   align-items: center;
   position: relative;
-  max-width: 700px; /* Ajusta el tamaño según sea necesario */
+  max-width: 700px;
   overflow: hidden;
   margin: 20px 0;
 }
@@ -114,11 +114,11 @@ h2 {
 
 .carrusel-item {
   min-width: 100%;
-  display: none; /* Ocultar todas las imágenes por defecto */
+  display: none;
 }
 
 .carrusel-item.activo {
-  display: block; /* Solo mostrar la imagen activa */
+  display: block;
 }
 
 .carrusel-boton {
@@ -141,26 +141,11 @@ h2 {
   right: 10px;
 }
 
-
 /* Estilos específicos para la columna derecha (Sobre Nosotros) */
 .right-column {
   flex: 1;
-  max-width: 400px; /* Ajusta según el espacio disponible */
+  max-width: 400px;
 }
-
-.img_visible {
-  opacity: 1;
-  visibility: visible;
-  transition: all 1s linear;
-}
-
-.img_oculto {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 1s linear;
-}
-
-/* Fin de la nueva estructura CSS */
 
 /* Estilos de la tarjeta para la sección "Sobre Nosotros" */
 .sobre-nosotros-card {
@@ -169,18 +154,17 @@ h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   padding: 1.5em;
   margin: auto;
-  max-width: 500px; /* Ajusta el ancho máximo si lo deseas */
+  max-width: 500px;
   text-align: center;
 }
 
 .sobre-nosotros-card h2 {
-  color: #003366; /* Color del ícono en su estado normal */
+  color: #003366;
 }
 
-.sobre-nosotros-card p{
-  margin: 5px ;
+.sobre-nosotros-card p {
+  margin: 5px;
 }
-
 
 /* Sección de Visión y Misión */
 .vision-mision {
@@ -189,7 +173,6 @@ h2 {
   text-align: center;
 }
 
-/* Título de la sección */
 .vision-mision h2 {
   font-size: 2.2em;
   color: #333;
@@ -199,11 +182,11 @@ h2 {
 /* Contenedor para las tarjetas de Visión y Misión */
 .cards-container {
   display: flex;
-  justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+  justify-content: space-around;
   gap: 2em;
   padding: 2em;
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centrar el contenedor en la página */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Estilos de las tarjetas */
@@ -212,17 +195,15 @@ h2 {
   border-radius: 0%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   padding: 2em;
-  width: 70%; /* Abarcar más ancho de la pantalla */
+  width: 70%;
   text-align: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  position: relative; /* Necesario para el efecto de onda */
+  position: relative;
 }
-
-
 
 /* Efecto de hover en las tarjetas */
 .card:hover {
-  background-color: #2C3E50; /* Cambia a un tono oscuro al pasar el cursor */
+  background-color: #2C3E50;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -233,7 +214,6 @@ h2 {
   display: inline-block;
 }
 
-/* Icono con efecto de ondas */
 .card .icon img {
   width: 60px;
   height: 60px;
@@ -242,13 +222,12 @@ h2 {
   background-color: #ececec;
   box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   transition: box-shadow 0.6s ease, transform 0.6s ease;
-  animation: water-drop 1.5s infinite; /* Agregamos la animación */
+  animation: water-drop 1.5s infinite;
 }
 
-/* Efecto de expansión en la onda al hacer hover */
 .card:hover .icon img {
   box-shadow: 0 0 20px 10px rgba(204, 169, 44, 0.4);
-  transform: scale(1.1); /* Amplía ligeramente el icono */
+  transform: scale(1.1);
 }
 
 /* Animación tipo gota de agua */
@@ -269,14 +248,14 @@ h2 {
   font-size: 1.5em;
   color: #003366;
   margin-bottom: 0.5em;
-  font-weight: bold; /* Negrita por defecto */
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 /* Texto dentro de las tarjetas */
 .card p {
   font-size: 1em;
-  color: #333; /* Gris oscuro por defecto */
+  color: #333;
   line-height: 1.6;
   transition: color 0.3s ease;
 }
@@ -284,18 +263,18 @@ h2 {
 /* Cambiar el color del texto al hacer hover */
 .card:hover h3,
 .card:hover p {
-  color: #ffffff; /* Cambiar texto a blanco en hover */
+  color: #ffffff;
 }
 
 .card .icon {
   margin-bottom: 1em;
-  font-size: 3em; /* Tamaño del ícono */
-  color: #003366; /* Color del ícono en su estado normal */
-  transition: color 0.3s ease; /* Suaviza el cambio de color en hover */
+  font-size: 3em;
+  color: #003366;
+  transition: color 0.3s ease;
 }
 
 .card:hover .icon {
-  color: #fff; /* Color del ícono cuando el cursor está sobre la tarjeta */
+  color: #fff;
 }
 
 /* Estilos del pie de página */
@@ -366,67 +345,69 @@ footer p {
 /* Configuración responsive para dispositivos móviles */
 @media screen and (max-width: 1040px) {
   #siguiente {
-      height: 200px;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 800px) {
   #siguiente, #anterior {
-      height: 200px;
+    height: 200px;
   }
+
   #siguiente img, #anterior img {
-      max-width: 25px;
-      height: 25px;
-      top: 40%;
+    max-width: 25px;
+    height: 25px;
+    top: 40%;
   }
 }
 
 @media screen and (max-width: 550px) {
   #siguiente, #anterior {
-      height: 125px;
+    height: 125px;
   }
+
   #siguiente img, #anterior img {
-      max-width: 25px;
-      height: 25px;
-      top: 40%;
+    max-width: 25px;
+    height: 25px;
+    top: 40%;
   }
 }
 
 /* Ajustes para tablets (pantallas medianas) */
 @media screen and (max-width: 768px) {
   .contenedor-principal {
-    flex-direction: column; /* Cambia a diseño en columna para dispositivos medianos */
+    flex-direction: column;
   }
-  
+
   .carrusel-simplificado {
-    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho en tablets */
+    max-width: 100%;
   }
 
   .right-column {
-    max-width: 100%; /* Asegura que la sección de "Sobre Nosotros" ocupe todo el ancho */
+    max-width: 100%;
   }
 }
 
 /* Ajustes para móviles (pantallas pequeñas) */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px; /* Reduce el tamaño del texto */
+    font-size: 14px;
   }
 
   header nav {
-    flex-direction: column; /* Cambia el menú a una columna en móviles */
+    flex-direction: column;
   }
 
   .carrusel-boton {
-    padding: 8px; /* Botones más pequeños en móviles */
+    padding: 8px;
   }
 
   .cards-container {
-    flex-direction: column; /* Cambia a diseño en columna para tarjetas en móviles */
+    flex-direction: column;
   }
 
   .card {
-    width: 90%; /* Ajusta el ancho de las tarjetas para ocupar casi todo el espacio */
-    margin: 10px auto; /* Centra las tarjetas con margen automático */
+    width: 90%;
+    margin: 10px auto;
   }
 }
