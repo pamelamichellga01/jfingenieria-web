@@ -341,3 +341,33 @@ footer p {
     margin-top: 1em;
     font-size: 0.9em;
 }
+
+/* Ajustes para tablets (pantallas medianas) */
+@media screen and (max-width: 768px) {
+    #sec_principal {
+      flex-direction: column; /* Apila secciones verticalmente */
+      align-items: center; /* Centra los elementos */
+    }
+  
+    .perfil_profesional {
+      margin-left: 0; /* Elimina el margen izquierdo en tablets */
+      text-align: center; /* Centra el texto */
+    }
+  }
+  
+  /* Ajustes para móviles (pantallas pequeñas) */
+  @media screen and (max-width: 480px) {
+    .perfil_profesional h2 {
+      font-size: 1.8em; /* Reduce el tamaño de los títulos */
+    }
+  
+    .perfil_profesional p {
+      font-size: 1em; /* Reduce el tamaño del texto */
+    }
+  
+    .card-container {
+      flex-direction: column; /* Apila las tarjetas verticalmente en móviles */
+      gap: 1em; /* Reduce la separación entre tarjetas */
+    }
+  }
+  

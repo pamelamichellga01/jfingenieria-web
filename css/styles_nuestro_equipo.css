@@ -145,3 +145,29 @@ footer p {
   margin-top: 1em;
   font-size: 0.9em;
 }
+
+/* Ajustes para tablets (pantallas medianas) */
+@media screen and (max-width: 768px) {
+  .team-container {
+    flex-direction: column; /* Apila miembros del equipo verticalmente */
+    gap: 20px; /* Espacio adicional entre miembros del equipo */
+  }
+
+  .team-member {
+    width: 80%; /* Asegura que cada miembro ocupe más espacio en tablets */
+    margin: 10px auto; /* Centra cada tarjeta */
+  }
+}
+
+/* Ajustes para móviles (pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+  .team-member img {
+    width: 100px; /* Tamaño más pequeño para imágenes en móviles */
+    height: 100px;
+  }
+
+  .team-member button {
+    font-size: 0.9em; /* Ajusta el tamaño del texto del botón en móviles */
+    padding: 10px 15px; /* Reduce el padding para móviles */
+  }
+}
