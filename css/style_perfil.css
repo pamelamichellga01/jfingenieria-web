@@ -190,7 +190,7 @@ body {
 .foto-wrapper::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 20px;
     width: 100%;
     height: 100%;
