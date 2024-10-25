@@ -1,0 +1,37 @@
+/* Estilo general del texto en la página de mantenimiento */
+.maintenance-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #003366; /* Ajusta el color del texto si lo deseas */
+    font-weight: bold;
+    text-align: center;
+}
+
+.maintenance-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666666; /* Ajusta el color del texto */
+    text-align: center;
+}
+
+/* Media Queries para dispositivos tablets */
+@media screen and (max-width: 768px) {
+    .maintenance-content h1 {
+        font-size: 2em; /* Reduce el tamaño del título en tablets */
+    }
+
+    .maintenance-content p {
+        font-size: 1.1em; /* Reduce ligeramente el tamaño del texto en tablets */
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .maintenance-content h1 {
+        font-size: 1.8em; /* Reduce aún más el tamaño del título en móviles */
+    }
+
+    .maintenance-content p {
+        font-size: 1em; /* Ajusta el tamaño del texto en móviles */
+    }
+}
