@@ -417,3 +417,18 @@ footer p {
     margin: 10px auto;
   }
 }
+
+  /* Ocultar submenu en tablets y móviles */
+  @media screen and (max-width: 768px) {
+    /* Esto aplica para pantallas de hasta 768px de ancho (tablets y menores) */
+    ul.submenu {
+        display: none !important; /* Fuerza a ocultar el submenu en dispositivos pequeños */
+    }
+}
+
+/* Desactivar hover en tablets y móviles */
+@media screen and (max-width: 768px) {
+    ul.menu li:hover .submenu {
+        display: none !important; /* No mostrar submenu al pasar el mouse */
+    }
+}
