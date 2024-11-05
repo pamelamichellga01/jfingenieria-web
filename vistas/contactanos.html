@@ -8,28 +8,9 @@
     
     <!-- flaticon del footer -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    
-    <!-- flaticon de habilidaddes y competencias -->
-    <!--<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>-->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <!-- flaticon de responsabilidades -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <!-- flaticon de perfil personal -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    
-    <!-- Enlace a los estilos generales (header, footer, etc.) -->
-    <link rel="stylesheet" href="../css/style_perfil.css">
-    <!-- Enlace a los estilos específicos del formulario de contacto -->
+    <!-- Otros estilos CSS -->
     <link rel="stylesheet" href="../css/style_contact_form.css">
     <link rel="stylesheet" href="../css/style.css">
-    
 </head>
 <body>
     <!-- Header con degradado y navegación -->
@@ -52,33 +33,40 @@
                 <li><a href="fuera_de_servicio.html">Servicios</a></li>
                 <li><a href="contactanos.html">Contáctenos</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <img id="icon-diurno" src="../img/eclipse_6015864.png" alt="Modo Diurno" style="display: none;">
+                <img id="icon-nocturno" src="../img/eclipse.png" alt="Modo Nocturno">
+            </button>
         </nav>
     </header>
 
-        <!-- Contenido Principal del Formulario de Contacto -->
-        <div class="contenedor_contacto">
-            <!-- Información de contacto -->
-            <div class="infor_contacto">
-                <img src="../img/presentacion.jpg" alt="Imagen de Contacto" class="imagen-contacto">
-            </div>
-            
-            <!-- Formulario de contacto -->
-            <div class="form_contacto">
-                <h2>Envíame un Mensaje</h2>
-                <form action="#" method="post">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                    
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
-            </div>
+    <!-- Contenido Principal del Formulario de Contacto -->
+    <div class="contenedor_contacto">
+        <!-- Información de contacto -->
+        <div class="infor_contacto">
+            <img src="../img/presentacion.jpg" alt="Imagen de Contacto" class="imagen-contacto">
         </div>
+        
+        <!-- Formulario de contacto -->
+        <div class="form_contacto">
+            <h2>Envíame un Mensaje</h2>
+            <form action="#" method="post" onsubmit="return validarFormulario()">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contacto">Número de Contacto</label>
+                <input type="text" id="contacto" name="contacto" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Pie de página con degradado -->
     <footer>
@@ -92,6 +80,11 @@
             <p>Contacto: +57 316 6219432 | info@jfingenieria.com</p>
         </div>
     </footer>
+
+    <!-- Enlace a los archivos JavaScript -->
+    <script src="../js/carrusel.js"></script>
+    <script src="../js/formulario.js"></script>
 </body>
 </html>
+
 

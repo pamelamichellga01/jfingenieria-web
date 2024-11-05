@@ -346,8 +346,10 @@
   footer {
     background: linear-gradient(135deg, #003366, #808080);
     color: white;
-    padding: 2em 0;
+    padding: 1em;
     text-align: center;
+    width: 100%;
+    margin-top: auto;
   }
   
   footer .social-links {

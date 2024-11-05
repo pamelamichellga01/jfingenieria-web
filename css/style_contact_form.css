@@ -3,13 +3,17 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .contenedor_contacto {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    padding: 1.5em 5%;
-    gap: 1em;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .infor_contacto, .form_contacto {
