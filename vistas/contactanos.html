@@ -17,7 +17,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../img/logo.png" alt="Logo de la empresa">
+                <a href="../index.html"><img src="../img/logo.png" alt="Logo de la empresa"></a>
             </div>
             <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
@@ -50,21 +50,29 @@
         <!-- Formulario de contacto -->
         <div class="form_contacto">
             <h2>Envíame un Mensaje</h2>
-            <form action="#" method="post" onsubmit="return validarFormulario()">
+            <form id="formularioContacto" action="#" method="post" target="_blank" onsubmit="return validarFormulario(event)">
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" required>
-
+                <div id="errorName" class="error">Por favor, ingresa un nombre válido.</div> <!-- Error para el nombre -->
+            
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-
+                <div id="errorEmail" class="error">Por favor, ingresa un correo electrónico válido.</div> <!-- Error para el email -->
+            
                 <label for="contacto">Número de Contacto</label>
                 <input type="text" id="contacto" name="contacto" required>
-
+                <div id="errorContacto" class="error">Por favor, ingresa un número de contacto válido de 10 dígitos.</div> <!-- Error para el contacto -->
+            
                 <label for="message">Mensaje</label>
                 <textarea id="message" name="message" rows="6" required></textarea>
-
+                <div id="errorMessage" class="error">Por favor, ingresa un mensaje.</div> <!-- Error para el mensaje -->
+            
                 <button type="submit">Enviar Mensaje</button>
             </form>
+            
+            <div class="result" id="resultado"></div> <!-- Contenedor para la ventana de confirmación -->
+            
+
         </div>
     </div>
 

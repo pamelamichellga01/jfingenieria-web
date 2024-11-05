@@ -70,6 +70,38 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilos del popup de confirmación */
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9f7df; /* Verde claro */
+    border: 1px solid #a0d468; /* Borde verde */
+    color: #3c763d; /* Texto verde oscuro */
+    display: none; /* Oculto por defecto */
+    border-radius: 5px;
+}
+
+.popup {
+    text-align: left;
+}
+
+.popup h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #3c763d;
+    text-align: center;
+}
+
+/* Estilos de los mensajes de error */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; /* Oculto por defecto */
+}
+
+
+
 /* Media Query para Tablets (Pantallas medianas) */
 @media screen and (max-width: 768px) {
     .contenedor_contacto {
