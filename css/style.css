@@ -370,6 +370,13 @@
     margin-top: 1em;
     font-size: 0.9em;
   }
+
+/* Estilos específicos para los enlaces en el footer */
+.footer-content a {
+  color: inherit; /* Hereda el color del elemento padre */
+  text-decoration: none; /* Quita el subrayado */
+}
+
   
   /* ==============================
      Modo Nocturno

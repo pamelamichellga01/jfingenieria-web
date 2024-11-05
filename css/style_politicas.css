@@ -1,0 +1,26 @@
+.btn-nav button{
+    background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.btn-nav{
+    margin: 10px;
+    text-align: center;
+}
+.btn-nav button:hover{
+    background-color: #0055aa;
+}
+h1{
+    text-align: center;
+}
+p{
+        margin: 30px;
+}
+
+h3{
+    margin-left: 35px;
+}
