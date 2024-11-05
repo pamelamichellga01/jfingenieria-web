@@ -1,478 +1,500 @@
-/* Reset general - Elimina márgenes y padding predeterminados en los navegadores */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ==============================
+   Reset General
+   ============================== */
 
-/* Configuración del cuerpo de la página */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #fafafa;
-  color: #333;
-}
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ==============================
+     Configuración del Cuerpo
+     ============================== */
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
+  }
+  
+  /* ==============================
+     Header y Navegación
+     ============================== */
+  
+  header {
+    background: linear-gradient(135deg, #0E5A97, #999B9D);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 80px;
+  }
+  
+  ul.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  ul.menu li {
+    position: relative;
+  }
+  
+  ul.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  ul.menu li:hover {
+    background: linear-gradient(180deg, #2C5A7D, #507BA1);
+  }
+  
+  ul.submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(180deg, #607D99, #B2B4B6);
+    display: none;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
+  
+  ul.menu li:hover .submenu {
+    display: block;
+  }
+  
+  ul.submenu li a {
+    padding: 10px 15px;
+  }
+  
+  /* ==============================
+     Contenido Principal
+     ============================== */
+  
+  .contenido, .perfiles {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
 
-/* Estilos del encabezado y menú de navegación */
-header {
-  background: linear-gradient(135deg, #0E5A97, #999B9D);
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
-}
-
-.logo img {
-  height: 80px;
-}
-
-ul.menu {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap; /* Adaptable a dispositivos más pequeños */
-  justify-content: center;
-}
-
-ul.menu li {
-  position: relative;
-}
-
-ul.menu li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-}
-
-ul.menu li:hover {
-  background: linear-gradient(180deg, #2C5A7D, #507BA1);
-}
-
-ul.submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: linear-gradient(180deg, #607D99, #B2B4B6);
-  display: none;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-}
-
-ul.menu li:hover .submenu {
-  display: block;
-}
-
-ul.submenu li a {
-  padding: 10px 15px;
-}
-
-/* Estilos para el contenido principal */
-.contenido, .perfiles {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Contenedor para organizar el carrusel y la sección Sobre Nosotros */
+  /* Contenedor Principal en Pantallas Grandes */
 .contenedor-principal {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px;
-  height: 100%;
+  flex-direction: row; /* Establece el contenedor en modo fila para pantallas grandes */
+  justify-content: space-between; /* Acomoda los elementos con espacio entre ellos */
+  align-items: center; /* Alinea verticalmente al centro */
+  gap: 20px; /* Espacio entre el carrusel y el cuadro */
+  margin: 20px 40px;
 }
+  
+/* ==============================
+   Estilos del Carrusel
+   ============================== */
 
-/* Estilos del nuevo carrusel */
-.carrusel-simplificado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  max-width: 700px;
-  overflow: hidden;
-  margin: 20px 0;
-}
+   .carrusel-simplificado {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #f5f5f5; /* Fondo claro para el carrusel */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  }
+  
+  .carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    overflow: hidden; /* Asegura que las imágenes no desborden el contenedor */
+  }
+  
+  .carrusel-item {
+    width: 100%; /* Asegura que cada imagen ocupe el ancho completo del carrusel */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    object-fit: cover; /* Escala la imagen para llenar el contenedor sin distorsionar */
+    display: none;
+  }
+  
+  .carrusel-item.activo {
+    display: block; /* Muestra solo la imagen activa */
+  }
+  
+  .carrusel-boton {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .carrusel-boton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  #anterior {
+    left: 10px;
+  }
+  
+  #siguiente {
+    right: 10px;
+  }
+  
+  /* ==============================
+     Estilos para los Indicadores del Carrusel
+     ============================== */
+  .indicadores {
+    display: flex;
+    justify-content: center;
+    position: absolute; /* Posiciona los indicadores sobre el carrusel */
+    bottom: 10px; /* Coloca los indicadores en la parte inferior del carrusel */
+    width: 100%; /* Asegura que se centren en todo el ancho */
+    gap: 5px; /* Espacio entre indicadores */
+  }
+  
+  .indicador {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .indicador.activo {
+    background-color: #333; /* Color para el indicador activo */
+  }
+  
+  /* Estilos para el Modo Nocturno del Carrusel */
+  body.night-mode .carrusel-simplificado {
+    background-color: #333;
+  }
+  
+  body.night-mode .carrusel-boton {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  body.night-mode .carrusel-boton:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  body.night-mode .indicador {
+    background-color: #666;
+  }
+  
+  body.night-mode .indicador.activo {
+    background-color: #eee;
+  }  
+  
+  /* ==============================
+     Sección Sobre Nosotros
+     ============================== */
+  
+  .sobre-nosotros-card {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .sobre-nosotros-card h2 {
+    color: #003366;
+  }
+  
+  .sobre-nosotros-card p {
+    margin: 15px;
+    text-align: justify;
+  }
+  
+  /* ==============================
+     Sección Visión y Misión
+     ============================== */
+  
+  .vision-mision {
+    padding: 3em 5%;
+    background-color: #fafafa;
+    text-align: center;
+  }
+  
+  .vision-mision h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 1.5em;
+  }
+  
+  /* ==============================
+     Tarjetas (Cards)
+     ============================== */
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 45%;
+    min-width: 250px;
+    margin-bottom: 2em;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #2C3E50;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card .icon i {
+    font-size: 3em;
+    background-color: #ececec;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
+    animation: water-drop 1.5s infinite;
+    color: #003366;
+  }
+  
+  .card:hover .icon i {
+    box-shadow: 0 0 20px 10px rgba(204, 169, 44, 0.4);
+    transform: scale(1.1);
+  }
+  
+  @keyframes water-drop {
+    0% {
+      box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 25px 15px rgba(204, 169, 44, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+  }
+  
+  /* ==============================
+     Títulos y Texto en las Tarjetas
+     ============================== */
+  
+  .card h3 {
+    font-size: 1.5em;
+    color: #003366;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 15px;
+  }
+  
+  .card p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+    text-align: justify;
+    margin: 15px;
+  }
+  
+  .card:hover h3,
+  .card:hover p {
+    color: #ffffff;
+  }
+  
+  /* ==============================
+     Footer
+     ============================== */
+  
+  footer {
+    background: linear-gradient(135deg, #003366, #808080);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+  }
+  
+  footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 15px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  
+  footer p {
+    margin-top: 1em;
+    font-size: 0.9em;
+  }
+  
+  /* ==============================
+     Modo Nocturno
+     ============================== */
+  
+  body.night-mode {
+    background-color: #222;
+    color: #eee;
+  }
+  
+  body.night-mode header {
+    background: linear-gradient(135deg, #333, #555);
+  }
+  
+  body.night-mode ul.menu li a {
+    color: #eee;
+  }
+  
+  body.night-mode .contenido, 
+  body.night-mode .perfiles, 
+  body.night-mode .sobre-nosotros-card, 
+  body.night-mode .vision-mision, 
+  body.night-mode .card {
+    background-color: #333;
+    color: #eee;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
 
-.carrusel-imagenes {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-.carrusel-item {
-  min-width: 100%;
-  display: none;
-}
-
-.carrusel-item.activo {
-  display: block;
-}
-
-.carrusel-boton {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-#anterior {
-  left: 10px;
-}
-
-#siguiente {
-  right: 10px;
-}
-
-/* Estilos específicos para la columna derecha (Sobre Nosotros) */
-.right-column {
-  flex: 1;
-  max-width: 400px;
-}
-
-/* Estilos de la tarjeta para la sección "Sobre Nosotros" */
-.sobre-nosotros-card {
-  background-color: #ffffff;
-  border-radius: 0%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 1.5em;
-  margin: auto;
-  max-width: 500px;
-  text-align: center;
-}
-
-.sobre-nosotros-card h2 {
-  color: #003366;
-}
-
-.sobre-nosotros-card p {
-  margin: 5px;
-}
-
-/* Sección de Visión y Misión */
-.vision-mision {
-  padding: 3em 5%;
-  background-color: #fafafa;
-  text-align: center;
-}
-
-.vision-mision h2 {
+  /* Estilo para h2 en .vision-mision en modo nocturno */
+body.night-mode .vision-mision h2 {
+  color: #fff; /* Cambia el color del título a blanco */
   font-size: 2.2em;
-  color: #333;
   margin-bottom: 1.5em;
 }
 
-/* Contenedor para las tarjetas de Visión y Misión */
-.cards-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 2em;
-  padding: 2em;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en dispositivos más pequeños */
+/* Estilo para los párrafos en .card en modo nocturno */
+body.night-mode .card p {
+  color: #003366; /* Azul en modo nocturno */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
-/* Estilos de las tarjetas */
-.card {
-  background-color: #ffffff;
-  border-radius: 0%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 2em;
-  width: 45%; /* Ajusta a 45% para permitir dos tarjetas por fila en tablets */
-  min-width: 250px; /* Mínimo ancho para dispositivos más pequeños */
-  margin-bottom: 2em;
-  text-align: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  position: relative;
+/* Cambio de color a blanco al hacer hover en la tarjeta */
+body.night-mode .card:hover p {
+  color: #fff; /* Cambia a blanco cuando se hace hover en la tarjeta */
 }
-
-/* Efecto de hover en las tarjetas */
-.card:hover {
-  background-color: #2C3E50;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo de iconos en las tarjetas */
-.card .icon {
-  margin-bottom: 1em;
-  position: relative;
-  display: inline-block;
-}
-
-.card .icon i {
-  font-size: 3em; /* Ajuste del tamaño del icono */
-  background-color: #ececec;
-  padding: 15px; /* Aumenta el espacio para mejorar la visibilidad */
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
-  transition: box-shadow 0.6s ease, transform 0.6s ease;
-  animation: water-drop 1.5s infinite;
-  z-index: 1;
-  color: #003366;
-}
-
-.card:hover .icon i {
-  box-shadow: 0 0 20px 10px rgba(204, 169, 44, 0.4);
-  transform: scale(1.1);
-}
-
-/* Animación tipo gota de agua */
-@keyframes water-drop {
-  0% {
-    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.5);
+  
+  body.night-mode footer {
+    background: linear-gradient(135deg, #333, #444);
+    color: #ddd;
   }
-  50% {
-    box-shadow: 0 0 25px 15px rgba(204, 169, 44, 0);
+  
+  body.night-mode footer .social-links a {
+    color: #ddd;
   }
-  100% {
-    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-  }
-}
-
-/* Títulos dentro de las tarjetas */
-.card h3 {
-  font-size: 1.5em;
-  color: #003366;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-/* Texto dentro de las tarjetas */
-.card p {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-/* Cambiar el color del texto al hacer hover */
-.card:hover h3,
-.card:hover p {
-  color: #ffffff;
-}
-
-/* Media Queries para dispositivos tablets */
-@media screen and (max-width: 768px) {
-  .cards-container {
-    flex-direction: column; /* Apila las tarjetas en dispositivos más pequeños */
-    gap: 1.5em;
-  }
-
-  .card {
-    width: 80%; /* Ocupa un ancho mayor en tablets */
-    margin: 0 auto;
-  }
-
-  .vision-mision h2 {
-    font-size: 1.8em; /* Reduce el tamaño del título */
-  }
-}
-
-/* Media Queries para dispositivos móviles */
-@media screen and (max-width: 480px) {
-  .vision-mision h2 {
-    font-size: 1.6em;
-  }
-
-  .card {
-    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
-    margin-bottom: 1.5em;
-  }
-
-  .card .icon i {
-    font-size: 2.5em; /* Ajusta el tamaño del icono para móviles */
-    padding: 10px; /* Reduce el padding para móviles */
-  }
-}
-
-
-/* Estilos del pie de página */
-footer {
-  background: linear-gradient(135deg, #003366, #808080);
-  color: white;
-  padding: 2em 0;
-  text-align: center;
-}
-
-footer .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin: 15px;
-}
-
-footer .social-links a {
-  color: white;
-  font-size: 2em;
-  text-decoration: none;
-}
-
-footer p {
-  margin-top: 1em;
-  font-size: 0.9em;
-}
-
-/* Estilos específicos del carrusel */
-.carrusel {
-  position: relative;
-}
-
-.carrusel img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 80%;
-  transition: all 1s linear;
-}
-
-/* Configuración para imágenes visibles y ocultas en el carrusel */
-.img_visible {
-  opacity: 1;
-  transition: all 1s linear;
-}
-
-.img_oculto {
-  opacity: 0;
-  transition: all 1s linear;
-}
-
-/* Estilos para los botones de navegación del carrusel */
-#siguiente, #anterior {
-  display: inline-block;
-  vertical-align: top;
-  height: 50px;
-}
-
-#siguiente img, #anterior img {
-  position: relative;
-  display: block;
-  max-width: 100px;
-  height: 100px;
-  top: 35%;
-}
-
-/* Configuración responsive para dispositivos móviles */
-@media screen and (max-width: 1040px) {
-  #siguiente {
-    height: 200px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #siguiente, #anterior {
-    height: 200px;
-  }
-
-  #siguiente img, #anterior img {
-    max-width: 25px;
-    height: 25px;
-    top: 40%;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #siguiente, #anterior {
-    height: 125px;
-  }
-
-  #siguiente img, #anterior img {
-    max-width: 25px;
-    height: 25px;
-    top: 40%;
-  }
-}
-
-/* Ajustes para tablets (pantallas medianas) */
-@media screen and (max-width: 768px) {
-  .contenedor-principal {
-    flex-direction: column;
-  }
-
-  .carrusel-simplificado {
-    max-width: 100%;
-  }
-
-  .right-column {
-    max-width: 100%;
-  }
-}
-
-/* Ajustes para móviles (pantallas pequeñas) */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  header nav {
-    flex-direction: column;
+  
+  /* ==============================
+     Botón Cambio de Tema
+     ============================== */
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    outline: none;
   }
-
-  ul.menu {
-    flex-direction: column;
-    align-items: center;
-}
-
-  .carrusel-boton {
-    padding: 8px;
+  
+  .theme-toggle img {
+    width: 40px;
+    height: 40px;
+    display: block;
   }
-
-  .cards-container {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 90%;
-    margin: 10px auto;
-  }
-}
-
-  /* Ocultar submenu en tablets y móviles */
+  
+  /* ==============================
+     Media Queries
+     ============================== */
+  
   @media screen and (max-width: 768px) {
-    /* Esto aplica para pantallas de hasta 768px de ancho (tablets y menores) */
-    ul.submenu {
-        display: none !important; /* Fuerza a ocultar el submenu en dispositivos pequeños */
+
+    .contenedor-principal {
+      flex-direction: column; /* Cambia a modo columna para pantallas más pequeñas */
+      align-items: stretch; /* Acomoda los elementos a lo largo de toda la columna */
     }
-}
 
-/* Desactivar hover en tablets y móviles */
-@media screen and (max-width: 768px) {
-    ul.menu li:hover .submenu {
-        display: none !important; /* No mostrar submenu al pasar el mouse */
+    .cards-container {
+      flex-direction: column;
+      gap: 1.5em;
     }
-}
-
-/* Ajuste para tablets (pantallas medianas) */
-@media screen and (max-width: 768px) {
-  .card .icon img {
-      width: 50px;
-      height: 50px;
+  
+    .card {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .vision-mision h2 {
+      font-size: 1.8em;
+    }
   }
-}
-
-/* Ajuste para móviles (pantallas pequeñas) */
-@media screen and (max-width: 480px) {
-  .card .icon img {
-      width: 40px;
-      height: 40px;
+  
+  @media screen and (max-width: 480px) {
+    .vision-mision h2 {
+      font-size: 1.6em;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+  
+    .card .icon i {
+      font-size: 2.5em;
+      padding: 10px;
+    }
+  
+    .contenedor-principal {
+      flex-direction: column;
+    }
+  
+    .carrusel-simplificado {
+      max-width: 100%;
+    }
+  
+    .right-column {
+      max-width: 100%;
+    }
   }
-}
+  
