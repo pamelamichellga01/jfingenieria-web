@@ -173,6 +173,7 @@
   /* ==============================
      Estilos para los Indicadores del Carrusel
      ============================== */
+
   .indicadores {
     display: flex;
     justify-content: center;
@@ -397,6 +398,15 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
   }
+
+       /* Estilos para el submenu en modo oscuro */
+body.night-mode ul.submenu {
+  background: linear-gradient(180deg, #333, #555); /* Colores más oscuros */
+} 
+
+body.night-mode ul.menu li:hover {
+  background: linear-gradient(180deg, #333, #555);
+}
 
   /* Estilo para h2 en .vision-mision en modo nocturno */
 body.night-mode .vision-mision h2 {
