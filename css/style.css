@@ -23,65 +23,89 @@
      Header y Navegación
      ============================== */
   
-  header {
-    background: linear-gradient(135deg, #0E5A97, #999B9D);
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-  }
-  
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    flex-wrap: wrap;
-  }
-  
-  .logo img {
-    height: 80px;
-  }
-  
-  ul.menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  ul.menu li {
-    position: relative;
-  }
-  
-  ul.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-  }
-  
-  ul.menu li:hover {
-    background: linear-gradient(180deg, #2C5A7D, #507BA1);
-  }
-  
-  ul.submenu {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background: linear-gradient(180deg, #607D99, #B2B4B6);
-    display: none;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-  }
-  
-  ul.menu li:hover .submenu {
-    display: block;
-  }
-  
-  ul.submenu li a {
-    padding: 10px 15px;
-  }
+  /* Estilos generales del header */
+header {
+  background: linear-gradient(135deg, #0E5A97, #999B9D);
+  color: white;
+  padding: 1em 0;
+}
+
+/* Configuración del contenedor nav */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+}
+
+/* Menú principal */
+ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Espacio entre elementos del menú */
+  align-items: center;
+}
+
+/* Elementos del menú principal */
+ul.menu li {
+  position: relative;
+}
+
+/* Enlaces del menú principal */
+ul.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s ease; /* Transición para un efecto suave */
+}
+
+/* Fondo al pasar el ratón sobre los elementos del menú principal */
+ul.menu li:hover {
+  background: linear-gradient(180deg, #2C5A7D, #507BA1);
+  border-radius: 5px;
+}
+
+/* Submenú */
+ul.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: linear-gradient(180deg, #607D99, #B2B4B6);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  min-width: 150px; /* Define un ancho mínimo para el submenú */
+  border-radius: 5px;
+}
+
+/* Mostrar submenú al pasar el ratón */
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+/* Enlaces del submenú */
+ul.submenu li a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease; /* Transición para un efecto suave */
+}
+
+/* Fondo al pasar el ratón sobre los elementos del submenú */
+ul.submenu li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
   
   /* ==============================
      Contenido Principal
@@ -462,6 +486,25 @@ body.night-mode .card:hover p {
     height: 40px;
     display: block;
   }
+
+  #login {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .login img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+
+
   
   /* ==============================
      Media Queries
