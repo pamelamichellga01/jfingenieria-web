@@ -53,15 +53,17 @@ A continuación se muestran las imágenes de referencia de las vistas principale
 
 ### Mockups de Vistas
 
-![Inicio](mockup/01_inicio.jpeg)
-![Nuestro Equipo](mockup/02_Nuestro_Equipo.jpeg)
-![Perfil Equipo](mockup/03_perfil_equipo.jpeg)
-![Servicios](mockup/04_Servicios.jpeg)
-![Contacto](mockup/05_Contacto.jpeg)
-![Modo Oscuro](mockup/06_Modo_Oscuro.jpeg)
-![Login](mockup/07_Login.jpeg)
-![Términos Legales](mockup/08_Terminos_Legales.jpeg)
-![Página Fuera de Servicio](mockup/09_Pagina_Fuera_Servicio.png)
+<p align="center">
+  <img src="mockup/01_inicio.jpeg" alt="Inicio" width="500"/>
+  <img src="mockup/02_Nuestro_Equipo.jpeg" alt="Nuestro Equipo" width="500"/>
+  <img src="mockup/03_perfil_equipo.jpeg" alt="Perfil Equipo" width="500"/>
+  <img src="mockup/04_Servicios.jpeg" alt="Servicios" width="500"/>
+  <img src="mockup/05_Contacto.jpeg" alt="Contacto" width="500"/>
+  <img src="mockup/06_Modo_Oscuro.jpeg" alt="Modo Oscuro" width="500"/>
+  <img src="mockup/07_Login.jpeg" alt="Login" width="500"/>
+  <img src="mockup/08_Terminos_Legales.jpeg" alt="Términos Legales" width="500"/>
+  <img src="mockup/09_Pagina_Fuera_Servicio.png" alt="Página Fuera de Servicio" width="500"/>
+</p>
 
 ### Prototipos Iniciales (Figma)
 
