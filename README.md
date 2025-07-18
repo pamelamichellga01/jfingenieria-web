@@ -67,10 +67,12 @@ A continuación se muestran las imágenes de referencia de las vistas principale
 
 En la subcarpeta `mockup/figma/` se encuentran los modelos iniciales realizados en Figma:
 
-![Figma 1](mockup/figma/Imagen1.png)
-![Figma 2](mockup/figma/Imagen2.png)
-![Figma 3](mockup/figma/Imagen3.png)
-![Figma 4](mockup/figma/Imagen4.png)
+<p align="center">
+  <img src="mockup/figma/Imagen1.png" alt="Figma 1" width="300"/>
+  <img src="mockup/figma/Imagen2.png" alt="Figma 2" width="300"/>
+  <img src="mockup/figma/Imagen3.png" alt="Figma 3" width="300"/>
+  <img src="mockup/figma/Imagen4.png" alt="Figma 4" width="300"/>
+</p>
 
 Estos recursos documentan el proceso de diseño, desde la conceptualización hasta la implementación final.
 
