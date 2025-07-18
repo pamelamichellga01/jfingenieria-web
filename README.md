@@ -1,4 +1,4 @@
-# jfingenieria-web
+# JF Ingeniería - web
 
 Proyecto web desarrollado para la empresa **J.F. Ingeniería y Soluciones S.A.S.** como parte del curso de programación de Talento Tech. El objetivo fue crear una página web moderna, visualmente atractiva y funcional, que facilite la gestión y presentación de servicios relacionados con equipos biomédicos.
 
