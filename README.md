@@ -91,7 +91,7 @@ Estos recursos documentan el proceso de diseño, desde la conceptualización has
 
 ## Créditos
 
-- **Desarrollado por:** [Tu nombre o equipo]
+- **Desarrollado por:** Pamela Michell Galvis Álvarez
 - **Empresa:** J.F. Ingeniería y Soluciones S.A.S.
 - **Curso:** Talento Tech - Programación
 
